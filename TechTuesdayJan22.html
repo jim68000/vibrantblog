@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>untitled</title>
+	<meta name="generator" content="TextMate http://macromates.com/">
+	<meta name="author" content="Jim Smith">
+	<!-- Date: 2013-01-17 -->
+</head>
+<body>
+<canvas id="my_canvas" width="200" height="200"></canvas>
+
+<script type="text/javascript" charset="utf-8">
+	var my_context = document.getElementById("my_canvas").getContext("2d");
+	var left_position = 10;
+
+	var my_intvl = setInterval(function() {
+		  my_context.clearRect(0,0,200,200);
+	      my_context.fillRect(left_position, 10, 50, 50);
+	      left_position++;
+	      if (left_position > 200) {
+	         clearInterval(my_intvl);
+	      }
+	}, 1000/50);
+</script>
+</body>
+</html>
